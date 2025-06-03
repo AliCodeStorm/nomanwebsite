@@ -22,11 +22,11 @@ const HeroSection = () => {
   }, []);
 
   return (
-    <section id="heroSection" className="min-h-screen flex items-center bg-white dark:bg-black  md:pt-0">
+    <section id="heroSection" className="min-h-screen flex items-center bg-white dark:bg-black mt-6 md:mt-4">
       <div className="container mx-auto px-4">
         <div className="flex flex-col md:flex-row items-center">
           {/* Text Left */}
-          <div className="w-full md:w-1/2 text-center md:text-left order-1">
+          <div className="w-full md:w-1/2 text-center md:text-left order-1 mt-10">
             <h1 className="text-4xl md:text-5xl font-bold mb-4">
               Hi, I'm <span className="text-black dark:text-white">Muhammad Noman,</span>
             </h1>
