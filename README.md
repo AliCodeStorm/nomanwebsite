@@ -1,12 +1,68 @@
-# React + Vite
+# Personal Portfolio Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, responsive portfolio website built with React, Vite, and TailwindCSS.
 
-Currently, two official plugins are available:
+## 🚀 Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Responsive design that works on all devices
+- Clean and modern UI using TailwindCSS
+- Fast performance with Vite
+- Interactive UI components
+- Dynamic routing with React Router
+- SEO optimization with React Helmet
 
-## Expanding the ESLint configuration
+## 🛠️ Tech Stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- React 19
+- Vite 6
+- TailwindCSS 4
+- React Router v7
+- React Helmet
+- PostCSS
+
+## 📦 Installation
+
+1. Clone the repository:
+```bash
+git clone [your-repo-url]
+cd Project36
+```
+
+2. Install dependencies:
+```bash
+npm install
+```
+
+3. Start the development server:
+```bash
+npm run dev
+```
+
+## 📁 Project Structure
+
+```
+src/
+├── components/        # Reusable UI components
+│   ├── layouts/      # Layout components
+│   ├── Section/      # Section components
+│   ├── Theme/        # Theme related components
+│   └── ui/           # UI elements
+├── pages/            # Page components
+├── assets/           # Static assets
+└── lib/              # Utility functions
+```
+
+## 🔧 Configuration
+
+- `vite.config.js` - Vite configuration
+- `tailwind.config.js` - TailwindCSS configuration
+- `postcss.config.js` - PostCSS configuration
+- `eslint.config.js` - ESLint configuration
+
+## 📝 License
+
+[Your chosen license]
+
+## 🤝 Contact
+
+[Your contact information]

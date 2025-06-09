@@ -42,19 +42,19 @@ const Footer = () => {
                             <div>
                                 <h3 className="text-sm font-semibold text-black dark:text-white">Services</h3>
                                 <ul className="mt-6 space-y-4">
-                                    <li><NavLink to="/seo" className="text-sm hover:text-blue-600">SEO</NavLink></li>
-                                    <li><NavLink to="/social-media" className="text-sm hover:text-blue-600">Social Media</NavLink></li>
-                                    <li><NavLink to="/ads" className="text-sm hover:text-blue-600">Google Ads</NavLink></li>
-                                    <li><NavLink to="/content" className="text-sm hover:text-blue-600">Content Marketing</NavLink></li>
+                                    <li><NavLink to="/services" className="text-sm hover:text-blue-600">SEO</NavLink></li>
+                                    <li><NavLink to="/services" className="text-sm hover:text-blue-600">Social Media</NavLink></li>
+                                    <li><NavLink to="/services" className="text-sm hover:text-blue-600">Google Ads</NavLink></li>
+                                    <li><NavLink to="/services" className="text-sm hover:text-blue-600">Content Marketing</NavLink></li>
                                 </ul>
                             </div>
                             <div className="mt-10 md:mt-0">
                                 <h3 className="text-sm font-semibold text-black dark:text-white">Pages</h3>
                                 <ul className="mt-6 space-y-4">
-                                    <li><NavLink to="/about" className="text-sm hover:text-blue-600">Home</NavLink></li>
+                                    <li><NavLink to="/" className="text-sm hover:text-blue-600">Home</NavLink></li>
                                     <li><NavLink to="/about" className="text-sm hover:text-blue-600">About Us</NavLink></li>
-                                    <li><NavLink to="/about" className="text-sm hover:text-blue-600">Services</NavLink></li>
-                                    <li><NavLink to="/about" className="text-sm hover:text-blue-600">Contact</NavLink></li>
+                                    <li><NavLink to="/services" className="text-sm hover:text-blue-600">Services</NavLink></li>
+                                    <li><NavLink to="/contact" className="text-sm hover:text-blue-600">Contact</NavLink></li>
                                 </ul>
                             </div>
                         </div>
@@ -63,15 +63,15 @@ const Footer = () => {
                             <div>
                                 <h3 className="text-sm font-semibold text-black dark:text-white">Support</h3>
                                 <ul className="mt-6 space-y-4">
-                                    <li><NavLink to="/faq" className="text-sm hover:text-blue-600">FAQ</NavLink></li>
-                                    <li><NavLink to="/guides" className="text-sm hover:text-blue-600">Guides</NavLink></li>
+                                    <li><NavLink to="/services" className="text-sm hover:text-blue-600">FAQ</NavLink></li>
+                                    <li><NavLink to="/services" className="text-sm hover:text-blue-600">Guides</NavLink></li>
                                 </ul>
                             </div>
                             <div className="mt-10 md:mt-0">
                                 <h3 className="text-sm font-semibold text-black dark:text-white">Legal</h3>
                                 <ul className="mt-6 space-y-4">
-                                    <li><NavLink to="/privacy-policy" className="text-sm hover:text-blue-600">Privacy Policy</NavLink></li>
-                                    <li><NavLink to="/terms" className="text-sm hover:text-blue-600">Terms & Conditions</NavLink></li>
+                                    <li><NavLink to="/privacypolicy" className="text-sm hover:text-blue-600">Privacy Policy</NavLink></li>
+                                    <li><NavLink to="/termsandconditions" className="text-sm hover:text-blue-600">Terms & Conditions</NavLink></li>
                                 </ul>
                             </div>
                         </div>

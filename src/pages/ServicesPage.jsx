@@ -68,7 +68,7 @@ const Services = () => {
                             whileInView={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.4, delay: index * 0.2 }}
                             viewport={{ once: true }}
-                            className="bg-gray-50 dark:bg-gray-900 p-6 rounded-xl shadow-md hover:shadow-lg transition"
+                            className=" cursor-pointer bg-gray-50 dark:bg-gray-900 p-6 rounded-xl  transition-all duration-300 ease-in-out hover:-translate-y-2 hover:shadow-lg"
                         >
                             <div className="flex items-center gap-3 mb-4">
                                 {service.icon}
@@ -81,7 +81,7 @@ const Services = () => {
                     ))}
                 </div>
             </div>
-            <Faqs/>
+            <Faqs />
         </>
     );
 };

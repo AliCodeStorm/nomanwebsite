@@ -43,7 +43,7 @@ const HeroSection = () => {
 
             <div className="flex flex-col sm:flex-row items-center gap-4">
               <NavLink to="/contact">
-                <Button variant="outline">
+                <Button className="cursor-pointer" variant="outline">
                   Get in Touch
                 </Button>
               </NavLink>
