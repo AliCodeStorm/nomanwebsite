@@ -1,11 +1,6 @@
 import React from 'react';
-import {
-    Facebook,
-    Instagram,
-    Twitter,
-    Github,
-    Youtube,
-} from 'lucide-react';
+import { NavLink } from 'react-router-dom';
+import { Facebook, Instagram, Twitter, Github, Youtube } from 'lucide-react';
 
 const Footer = () => {
     return (
@@ -15,34 +10,29 @@ const Footer = () => {
                     <div className="space-y-8">
                         <div className="flex items-center">
                             <img
-                                alt="Company name"
-                                src="https://tailwindcss.com/plus-assets/img/logos/mark.svg?color=indigo&shade=600"
+                                alt="Noman Digital Marketing"
+                                src="/logo.svg"
                                 className="h-8 w-auto"
                             />
                             <p className="ml-3 text-sm leading-6 text-black dark:text-white">
-                                Making the world a better place through constructing elegant hierarchies.
+                                Helping businesses grow online through expert digital marketing.
                             </p>
                         </div>
                         <div className="flex space-x-6">
-                            <a href="#" className="text-black dark:text-white hover:text-gray-500">
-                                <span className="sr-only">Facebook</span>
-                                <Facebook className="h-6 w-6" />
+                            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
+                                <Facebook className="h-6 w-6 text-black dark:text-white hover:text-blue-600" />
                             </a>
-                            <a href="#" className="text-black dark:text-white hover:text-gray-500">
-                                <span className="sr-only">Instagram</span>
-                                <Instagram className="h-6 w-6" />
+                            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
+                                <Instagram className="h-6 w-6 text-black dark:text-white hover:text-pink-500" />
                             </a>
-                            <a href="#" className="text-black dark:text-white hover:text-gray-500">
-                                <span className="sr-only">Twitter</span>
-                                <Twitter className="h-6 w-6" />
+                            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
+                                <Twitter className="h-6 w-6 text-black dark:text-white hover:text-sky-500" />
                             </a>
-                            <a href="#" className="text-black dark:text-white hover:text-gray-500">
-                                <span className="sr-only">GitHub</span>
-                                <Github className="h-6 w-6" />
+                            <a href="https://github.com" target="_blank" rel="noopener noreferrer">
+                                <Github className="h-6 w-6 text-black dark:text-white hover:text-gray-700" />
                             </a>
-                            <a href="#" className="text-black dark:text-white hover:text-gray-500">
-                                <span className="sr-only">YouTube</span>
-                                <Youtube className="h-6 w-6" />
+                            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer">
+                                <Youtube className="h-6 w-6 text-black dark:text-white hover:text-red-600" />
                             </a>
                         </div>
                     </div>
@@ -50,110 +40,47 @@ const Footer = () => {
                     <div className="mt-16 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">
                         <div className="md:grid md:grid-cols-2 md:gap-8">
                             <div>
-                                <h3 className="text-sm font-semibold leading-6 text-black dark:text-white">Solutions</h3>
+                                <h3 className="text-sm font-semibold text-black dark:text-white">Services</h3>
                                 <ul className="mt-6 space-y-4">
-                                    <li>
-                                        <a href="#" className="text-sm leading-6 text-black dark:text-white hover:text-gray-900">
-                                            Marketing
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#" className="text-sm leading-6 text-black dark:text-white hover:text-gray-900">
-                                            Analytics
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#" className="text-sm leading-6 text-black dark:text-white hover:text-gray-900">
-                                            Automation
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#" className="text-sm leading-6 text-black dark:text-white hover:text-gray-900">
-                                            Commerce
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#" className="text-sm leading-6 text-black dark:text-white hover:text-gray-900">
-                                            Insights
-                                        </a>
-                                    </li>
+                                    <li><NavLink to="/seo" className="text-sm hover:text-blue-600">SEO</NavLink></li>
+                                    <li><NavLink to="/social-media" className="text-sm hover:text-blue-600">Social Media</NavLink></li>
+                                    <li><NavLink to="/ads" className="text-sm hover:text-blue-600">Google Ads</NavLink></li>
+                                    <li><NavLink to="/content" className="text-sm hover:text-blue-600">Content Marketing</NavLink></li>
                                 </ul>
                             </div>
                             <div className="mt-10 md:mt-0">
-                                <h3 className="text-sm font-semibold leading-6 text-black dark:text-white">Support</h3>
+                                <h3 className="text-sm font-semibold text-black dark:text-white">Pages</h3>
                                 <ul className="mt-6 space-y-4">
-                                    <li>
-                                        <a href="#" className="text-sm leading-6 text-black dark:text-white hover:text-gray-900">
-                                            Submit ticket
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#" className="text-sm leading-6 text-black dark:text-white hover:text-gray-900">
-                                            Documentation
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#" className="text-sm leading-6 text-black dark:text-white hover:text-gray-900">
-                                            Guides
-                                        </a>
-                                    </li>
+                                    <li><NavLink to="/about" className="text-sm hover:text-blue-600">Home</NavLink></li>
+                                    <li><NavLink to="/about" className="text-sm hover:text-blue-600">About Us</NavLink></li>
+                                    <li><NavLink to="/about" className="text-sm hover:text-blue-600">Services</NavLink></li>
+                                    <li><NavLink to="/about" className="text-sm hover:text-blue-600">Contact</NavLink></li>
                                 </ul>
                             </div>
                         </div>
 
                         <div className="md:grid md:grid-cols-2 md:gap-8">
                             <div>
-                                <h3 className="text-sm font-semibold leading-6 text-black dark:text-white">Company</h3>
+                                <h3 className="text-sm font-semibold text-black dark:text-white">Support</h3>
                                 <ul className="mt-6 space-y-4">
-                                    <li>
-                                        <a href="#" className="text-sm leading-6 text-black dark:text-white hover:text-gray-900">
-                                            About
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#" className="text-sm leading-6 text-black dark:text-white hover:text-gray-900">
-                                            Blog
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#" className="text-sm leading-6 text-black dark:text-white hover:text-gray-900">
-                                            Jobs
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#" className="text-sm leading-6 text-black dark:text-white hover:text-gray-900">
-                                            Press
-                                        </a>
-                                    </li>
+                                    <li><NavLink to="/faq" className="text-sm hover:text-blue-600">FAQ</NavLink></li>
+                                    <li><NavLink to="/guides" className="text-sm hover:text-blue-600">Guides</NavLink></li>
                                 </ul>
                             </div>
                             <div className="mt-10 md:mt-0">
-                                <h3 className="text-sm font-semibold leading-6 text-gray-900">Legal</h3>
+                                <h3 className="text-sm font-semibold text-black dark:text-white">Legal</h3>
                                 <ul className="mt-6 space-y-4">
-                                    <li>
-                                        <a href="#" className="text-sm leading-6 text-black dark:text-white hover:text-gray-900">
-                                            Terms of service
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#" className="text-sm leading-6 text-black dark:text-white hover:text-gray-900">
-                                            Privacy policy
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#" className="text-sm leading-6 text-black dark:text-white hover:text-gray-900">
-                                            License
-                                        </a>
-                                    </li>
+                                    <li><NavLink to="/privacy-policy" className="text-sm hover:text-blue-600">Privacy Policy</NavLink></li>
+                                    <li><NavLink to="/terms" className="text-sm hover:text-blue-600">Terms & Conditions</NavLink></li>
                                 </ul>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <div className="mt-16 border-t border-gray-900/10 dark:border-white pt-8 sm:mt-20 lg:mt-24">
-                    <p className="text-sm leading-6 text-gray-500">
-                        © 2024 Your Company, Inc. All rights reserved.
+                <div className="mt-16 border-t border-gray-200 pt-8 sm:mt-20 lg:mt-24">
+                    <p className="text-sm text-gray-500 dark:text-gray-400">
+                        © 2025 Noman Digital Marketing. All rights reserved.
                     </p>
                 </div>
             </div>

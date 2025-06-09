@@ -5,6 +5,8 @@ import {
   Instagram,
   Linkedin,
 } from 'lucide-react';
+import { Button } from '../ui/button';
+import { NavLink } from "react-router-dom";
 
 const HeroSection = () => {
   const lottieContainer = useRef(null);
@@ -38,15 +40,14 @@ const HeroSection = () => {
               brand promotion, or boosting sales — I make sure your money isn't wasted but invested to grow.
             </p>
             <p className="mb-4">Let's work together to take your business to the next level!</p>
-            
+
             <div className="flex flex-col sm:flex-row items-center gap-4">
-              <a
-                href="/pages/contact.html"
-                className="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg text-lg font-medium hover:bg-blue-700 transition"
-              >
-                Get in Touch
-              </a>
-              
+              <NavLink to="/contact">
+                <Button variant="outline">
+                  Get in Touch
+                </Button>
+              </NavLink>
+
               <div className="flex gap-4 mt-4 sm:mt-0">
                 <a href="#" className="text-black dark:text-white hover:text-blue-600 transition">
                   <Facebook size={24} />
