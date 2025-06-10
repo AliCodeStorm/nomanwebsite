@@ -6,12 +6,14 @@ import { ThemeProvider } from "./components/Theme/theme-provider";
 import App from './App.jsx';
 import Navbar from "./components/layouts/NavigationBar";
 import Footer from './components/layouts/Footer';
+import { Toaster } from "@/components/ui/sonner"
 
 createRoot(document.getElementById('root')).render(
   <ThemeProvider>
     <Router>
       <Navbar />
       <StrictMode>
+         <Toaster position="top-right" richColors />
         <App />
       </StrictMode>
       <Footer />

@@ -5,6 +5,7 @@ import Services from "./pages/ServicesPage";
 import Contact from "./pages/ContactPage";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import TermsAndConditions from "./pages/TermsAndConditions";
+import ServiceDetail from "./pages/ServiceDetail";
 
 export default function App() {
   return (
@@ -15,6 +16,7 @@ export default function App() {
       <Route path="/contact" element={<Contact />} />
       <Route path="/privacypolicy" element={<PrivacyPolicy />} />
       <Route path="/termsandconditions" element={<TermsAndConditions />} />
+      <Route path="/services/:slug" element={<ServiceDetail />} />
     </Routes>
   );
 }

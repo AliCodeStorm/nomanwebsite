@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import { motion } from 'framer-motion';
-import { Mail, Phone, MapPin, Send } from 'lucide-react';
-
+import { Mail, Phone, MapPin, Send, Linkedin, Facebook, Twitter, Calendar } from 'lucide-react';
+import { toast } from "sonner"
 const inputVariants = {
     hidden: { opacity: 0, scale: 0.95, y: 30 },
     visible: (i) => ({
@@ -11,14 +11,34 @@ const inputVariants = {
         transition: { delay: i * 0.1, duration: 0.5, ease: 'easeOut' }
     }),
 };
-const handleSubmit = (e) => {
-    e.preventDefault();
-    alert("Form submitted! ✅");
-};
+
+import emailjs from 'emailjs-com';
+
+
 const Contact = () => {
+    const form = useRef();
+    const handleSubmit = (e) => {
+        e.preventDefault();
+
+        emailjs.sendForm(
+            'service_i6nb13t',
+            'template_pl64xsa',
+            e.target,
+            '_zhERR0YCgl3pZUuE'
+        )
+            .then((result) => {
+                toast("Message sent successfully! ✅");
+            }, (error) => {
+                toast.error("Failed to send message. ❌");
+                console.error(error.text);
+            });
+
+        e.target.reset();
+    };
     return (
         <div className="min-h-screen bg-white dark:bg-black text-black dark:text-white px-4 sm:px-6 lg:px-8 py-20">
-            <div className="max-w-4xl mx-auto">
+            <div className="max-w-5xl mx-auto">
+                {/* Header */}
                 <motion.h1
                     initial={{ opacity: 0, y: -20 }}
                     animate={{ opacity: 1, y: 0 }}
@@ -48,16 +68,22 @@ const Contact = () => {
                             <Mail className="w-6 h-6 text-blue-600 mt-1" />
                             <div>
                                 <h3 className="font-semibold">Email</h3>
-                                <p className="text-gray-700 dark:text-gray-300">nomiagent04@gmail.com</p>
+                                <a href="mailto:nomiagent04@gmail.com" className="text-gray-700 dark:text-gray-300 hover:underline">
+                                    nomiagent04@gmail.com
+                                </a>
                             </div>
                         </div>
+
                         <div className="flex items-start gap-4">
                             <Phone className="w-6 h-6 text-blue-600 mt-1" />
                             <div>
                                 <h3 className="font-semibold">Phone</h3>
-                                <p className="text-gray-700 dark:text-gray-300">0348 6823803</p>
+                                <a href="https://wa.me/923486823803" target="_blank" className="text-gray-700 dark:text-gray-300 hover:underline">
+                                    +92 348 6823803 (WhatsApp)
+                                </a>
                             </div>
                         </div>
+
                         <div className="flex items-start gap-4">
                             <MapPin className="w-6 h-6 text-blue-600 mt-1" />
                             <div>
@@ -65,11 +91,34 @@ const Contact = () => {
                                 <p className="text-gray-700 dark:text-gray-300">Lahore, Pakistan</p>
                             </div>
                         </div>
+
+                        {/* Social Links */}
+                        <div className="flex gap-4 mt-6">
+                            <a href="https://linkedin.com/in/yourprofile" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800">
+                                <Linkedin className="w-6 h-6" />
+                            </a>
+                            <a href="https://facebook.com/yourpage" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800">
+                                <Facebook className="w-6 h-6" />
+                            </a>
+                            <a href="https://twitter.com/yourhandle" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800">
+                                <Twitter className="w-6 h-6" />
+                            </a>
+                        </div>
+
+                        {/* Calendly Button */}
+                        <a
+                            href="https://calendly.com/yourname"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-flex items-center gap-2 text-blue-600 hover:underline mt-4"
+                        >
+                            <Calendar className="w-4 h-4" /> Book a Call
+                        </a>
                     </motion.div>
 
                     {/* Contact Form */}
-
                     <motion.form
+                        ref={form}
                         onSubmit={handleSubmit}
                         initial="hidden"
                         whileInView="visible"
