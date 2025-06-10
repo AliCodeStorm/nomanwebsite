@@ -1,15 +1,12 @@
 import React, { useEffect, useRef } from 'react';
 import lottie from 'lottie-web';
-import {
-  Facebook,
-  Instagram,
-  Linkedin,
-} from 'lucide-react';
 import { Button } from '../ui/button';
 import { NavLink } from "react-router-dom";
 import { motion } from 'framer-motion';
 import ProjectShowcase from './ProjectShowcase';
 import { projectData } from '../../data/projectData';
+import { RainbowButton } from '../magicui/rainbow-button';
+import SocialIcons from './SocialIcons';
 
 const HeroSection = () => {
   const lottieContainer = useRef(null);
@@ -58,15 +55,7 @@ const HeroSection = () => {
                 </NavLink>
 
                 <div className="flex gap-4 mt-4 sm:mt-0">
-                  <a href="#" className="text-black dark:text-white hover:text-blue-600 transition">
-                    <Facebook size={24} />
-                  </a>
-                  <a href="#" className="text-black dark:text-white hover:text-pink-600 transition">
-                    <Instagram size={24} />
-                  </a>
-                  <a href="#" className="text-black dark:text-white hover:text-blue-700 transition">
-                    <Linkedin size={24} />
-                  </a>
+                 <RainbowButton>Hire Me</RainbowButton>
                 </div>
               </div>
             </motion.div>
@@ -83,7 +72,7 @@ const HeroSection = () => {
           </div>
         </div>
       </section>
-
+<SocialIcons/>
       <ProjectShowcase
         projects={projectData}
         title="Latest Projects"

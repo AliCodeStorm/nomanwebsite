@@ -10,6 +10,7 @@ import {
     Instagram,
     Linkedin,
 } from 'lucide-react';
+import SkillsSection from '@/components/Section/SkillsSection';
 
 const About = () => {
     return (
@@ -96,8 +97,9 @@ const About = () => {
                 </div>
             </section>
 
+<SkillsSection/>
             {/* Social Proof / Testimonials */}
-            <section className="py-16 bg-gray-50 dark:bg-gray-900">
+            <section className="py-16 bg-gray-50 dark:bg-black">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <h2 className="text-3xl font-bold text-center text-gray-900 dark:text-gray-100 mb-12">Why Work With Me?</h2>
 
@@ -122,7 +124,7 @@ const About = () => {
                                 whileInView={{ opacity: 1, y: 0 }}
                                 transition={{ duration: 0.5, delay: index * 0.2 }}
                                 viewport={{ once: true }}
-                                className="bg-white dark:bg-black p-6 rounded-xl shadow-sm hover:shadow-md transition"
+                                className="bg-white dark:bg-gray-900 p-6 rounded-xl shadow-sm hover:shadow-md transition"
                             >
                                 <h3 className="text-xl font-semibold mb-3 text-gray-900 dark:text-gray-100">{item.title}</h3>
                                 <p className="text-gray-700 dark:text-gray-300">{item.desc}</p>
