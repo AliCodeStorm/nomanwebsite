@@ -53,7 +53,7 @@ const ProjectShowcase = ({ projects = [], title = "My Work", description = "", s
                     <div className="text-center mt-12">
                         <h4 className="text-xl font-semibold mb-2">Want results like these?</h4>
                         <NavLink to="/contact">
-                            <Button variant="default">Let’s Talk</Button>
+                            <Button variant="outline">Let&apos;s Talk</Button>
                         </NavLink>
                     </div>
                 )}
