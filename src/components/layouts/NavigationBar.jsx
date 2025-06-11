@@ -10,7 +10,7 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 
 export default function Navbar() {
   return (
-    <header className="w-full px-6 py-4 shadow-md bg-white dark:bg-gray-900 fixed top-0 left-0 z-50">
+    <header className="w-full px-6 py-4 shadow-md bg-gray-100 dark:bg-gray-900 fixed top-0 left-0 z-50">
       <div className="max-w-7xl mx-auto flex justify-between items-center">
 
         <NavLink to="/" className="flex items-center">

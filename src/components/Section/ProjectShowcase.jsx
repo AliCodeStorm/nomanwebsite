@@ -2,6 +2,7 @@ import React from "react";
 import { SquareArrowOutUpRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { NavLink } from "react-router-dom";
+import { Pointer } from "../magicui/pointer";
 
 const ProjectShowcase = ({ projects = [], title = "My Work", description = "", showCTA = true }) => {
     return (
@@ -20,7 +21,7 @@ const ProjectShowcase = ({ projects = [], title = "My Work", description = "", s
                     {projects.map((project, i) => (
                         <div
                             key={i}
-                            className="relative bg-gray-100 dark:bg-gray-900 p-6 rounded-xl hover:-translate-y-2 transition-all hover:shadow-md cursor-pointer"
+                            className="relative bg-gray-100 dark:bg-gray-900 p-6 rounded-xl hover:-translate-y-2 transition-all hover:shadow-md"
                         >
                             <SquareArrowOutUpRight className="absolute top-3 right-3 w-5 h-5 text-gray-500 dark:text-gray-50" />
 
@@ -40,13 +41,25 @@ const ProjectShowcase = ({ projects = [], title = "My Work", description = "", s
                                     href={project.link}
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="text-sm text-blue-600 hover:underline"
+                                    className="text-sm text-blue-600 hover:underline cursor-none"
                                 >
                                     View Case Study
                                 </a>
                             )}
                         </div>
                     ))}
+                    <Pointer>
+                        <svg
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                        >
+                            <circle cx="12" cy="12" r="10" className="fill-purple-500" />
+                            <circle cx="12" cy="12" r="5" className="fill-white" />
+                        </svg>
+                    </Pointer>
                 </div>
 
                 {showCTA && (

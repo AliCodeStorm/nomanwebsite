@@ -7,6 +7,8 @@ import ProjectShowcase from './ProjectShowcase';
 import { projectData } from '../../data/projectData';
 import { RainbowButton } from '../magicui/rainbow-button';
 import SocialIcons from './SocialIcons';
+import { BorderBeam } from '../magicui/border-beam';
+import { AuroraText } from '../magicui/aurora-text';
 
 const HeroSection = () => {
   const lottieContainer = useRef(null);
@@ -36,7 +38,10 @@ const HeroSection = () => {
               className="w-full md:w-1/2 text-center md:text-left order-1 mt-10"
             >
               <h1 className="text-4xl md:text-5xl font-bold mb-4">
-                Hi, I'm <span className="text-black dark:text-white">Muhammad Noman,</span>
+                Hi, I'm
+                <AuroraText speed={1}>
+                  Muhammad Noman,
+                </AuroraText>
               </h1>
               <p className="text-lg mb-4">
                 A passionate Digital Marketer with real experience in running Google and Meta (Facebook/Instagram) ads.
@@ -49,13 +54,23 @@ const HeroSection = () => {
 
               <div className="flex flex-col sm:flex-row items-center gap-4">
                 <NavLink to="/contact">
-                  <Button className="cursor-pointer" variant="outline">
+                  <Button className="cursor-pointer relative overflow-hidden " variant="outline">
                     Get in Touch
+                    <BorderBeam
+                      size={40}
+                      initialOffset={20}
+                      className="from-transparent via-yellow-500 to-transparent"
+                      transition={{
+                        type: "spring",
+                        stiffness: 60,
+                        damping: 20,
+                      }}
+                    />
                   </Button>
                 </NavLink>
 
                 <div className="flex gap-4 mt-4 sm:mt-0">
-                 <RainbowButton>Hire Me</RainbowButton>
+                  <RainbowButton>Hire Me</RainbowButton>
                 </div>
               </div>
             </motion.div>
@@ -72,7 +87,7 @@ const HeroSection = () => {
           </div>
         </div>
       </section>
-<SocialIcons/>
+      <SocialIcons />
       <ProjectShowcase
         projects={projectData}
         title="Latest Projects"

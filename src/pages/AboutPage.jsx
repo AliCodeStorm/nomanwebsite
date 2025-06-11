@@ -11,6 +11,8 @@ import {
     Linkedin,
 } from 'lucide-react';
 import SkillsSection from '@/components/Section/SkillsSection';
+import { Lens } from '@/components/magicui/lens';
+import { AuroraText } from '@/components/magicui/aurora-text';
 
 const About = () => {
     return (
@@ -24,7 +26,10 @@ const About = () => {
                         transition={{ duration: 0.8 }}
                         className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-gray-100 mb-4"
                     >
-                        About <span className="text-black dark:text-white">Muhammad Noman</span>
+                        About
+                        <AuroraText className="ml-1.5" speed={1}>
+                            Muhammad Noman,
+                        </AuroraText>
                     </motion.h1>
                     <p className="text-lg text-gray-700 dark:text-gray-300 max-w-3xl mx-auto">
                         A passionate Digital Marketer specializing in performance-driven advertising.
@@ -40,11 +45,13 @@ const About = () => {
                         transition={{ duration: 0.8, delay: 0.2 }}
                         className="flex justify-center"
                     >
-                        <img
-                            src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
-                            alt="Muhammad Noman"
-                            className="rounded-xl shadow-xl w-full max-w-md h-auto object-cover"
-                        />
+                        <Lens>
+                            <img
+                                src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
+                                alt="Muhammad Noman"
+                                className="rounded-xl shadow-xl w-full max-w-md h-auto object-cover"
+                            />
+                        </Lens>
                     </motion.div>
 
                     {/* Content */}
@@ -97,7 +104,7 @@ const About = () => {
                 </div>
             </section>
 
-<SkillsSection/>
+            <SkillsSection />
             {/* Social Proof / Testimonials */}
             <section className="py-16 bg-gray-50 dark:bg-black">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

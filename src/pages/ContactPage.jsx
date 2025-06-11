@@ -2,6 +2,12 @@ import React, { useRef } from 'react';
 import { motion } from 'framer-motion';
 import { Mail, Phone, MapPin, Send, Linkedin, Facebook, Twitter, Calendar } from 'lucide-react';
 import { toast } from "sonner"
+
+import emailjs from 'emailjs-com';
+import { BorderBeam } from '@/components/magicui/border-beam';
+import { HyperText } from '@/components/magicui/hyper-text';
+import { TextAnimate } from '@/components/magicui/text-animate';
+
 const inputVariants = {
     hidden: { opacity: 0, scale: 0.95, y: 30 },
     visible: (i) => ({
@@ -12,14 +18,30 @@ const inputVariants = {
     }),
 };
 
-import emailjs from 'emailjs-com';
-
-
 const Contact = () => {
     const form = useRef();
     const handleSubmit = (e) => {
         e.preventDefault();
+        const formData = new FormData(e.target);
+        const name = formData.get("name")?.trim();
+        const email = formData.get("email")?.trim();
+        const message = formData.get("message")?.trim();
 
+        // Basic validation
+        if (!name) {
+            toast.error("Please enter your name.");
+            return;
+        }
+
+        if (!email || !/^\S+@\S+\.\S+$/.test(email)) {
+            toast.error("Please enter a valid email address.");
+            return;
+        }
+
+        if (!message) {
+            toast.error("Please enter your message.");
+            return;
+        }
         emailjs.sendForm(
             'service_i6nb13t',
             'template_pl64xsa',
@@ -39,21 +61,24 @@ const Contact = () => {
         <div className="min-h-screen bg-white dark:bg-black text-black dark:text-white px-4 sm:px-6 lg:px-8 py-20">
             <div className="max-w-5xl mx-auto">
                 {/* Header */}
-                <motion.h1
-                    initial={{ opacity: 0, y: -20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.7 }}
-                    className="text-4xl md:text-5xl font-bold text-center mb-4"
-                >
-                    Get In <span className="text-blue-600">Touch</span>
-                </motion.h1>
+                <h1 className="text-4xl md:text-5xl font-bold text-center mb-4" >
+                    <TextAnimate animation="scaleUp" by="text" >
+                        Get In{" "}
+                        <HyperText className="inline whitespace-nowrap">
+                            Touch
+                        </HyperText>
+                    </TextAnimate>
+                </h1>
+
                 <motion.p
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     transition={{ delay: 0.3, duration: 0.7 }}
                     className="text-center text-gray-700 dark:text-gray-300 mb-12 max-w-2xl mx-auto"
                 >
-                    Have a project in mind? Let’s connect and talk about how we can grow your business together.
+                    <TextAnimate animation="blurInUp" by="character" duration={0.7} startOnView="true">
+                        Have a project in mind? Let’s connect and talk about how we can grow your business together.
+                    </TextAnimate>
                 </motion.p>
 
                 <div className="grid md:grid-cols-2 gap-10">
@@ -123,7 +148,7 @@ const Contact = () => {
                         initial="hidden"
                         whileInView="visible"
                         viewport={{ once: true }}
-                        className="space-y-6 bg-gray-50 dark:bg-gray-900 p-6 rounded-xl shadow-lg"
+                        className="relative overflow-hidden space-y-1 bg-gray-50 dark:bg-gray-900 p-6 rounded-xl shadow-lg"
                     >
                         {[
                             { label: "Full Name", type: "text", name: "name", placeholder: "Your Name" },
@@ -150,7 +175,7 @@ const Contact = () => {
                                         type={field.type}
                                         name={field.name}
                                         placeholder={field.placeholder}
-                                        className="w-full px-4 py-3 rounded-md bg-white dark:bg-black border border-gray-300 dark:border-gray-700 focus:ring-2 focus:ring-blue-500 focus:outline-none"
+                                        className="w-full px-4 py-2 rounded-md bg-white dark:bg-black border border-gray-300 dark:border-gray-700 focus:ring-2 focus:ring-blue-500 focus:outline-none"
                                     />
                                 )}
                             </motion.div>
@@ -164,6 +189,17 @@ const Contact = () => {
                         >
                             Send Message <Send className="w-4 h-4" />
                         </motion.button>
+                        <BorderBeam
+                            duration={6}
+                            size={400}
+                            className="from-transparent via-red-600 to-transparent"
+                        />
+                        <BorderBeam
+                            duration={6}
+                            delay={3}
+                            size={400}
+                            className="from-transparent via-blue-600 to-transparent"
+                        />
                     </motion.form>
                 </div>
             </div>

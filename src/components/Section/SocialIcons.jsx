@@ -8,7 +8,7 @@ import { FaPinterestP, FaBehance } from "react-icons/fa"; // Install with: npm i
 
 const SocialIcons = () => {
   return (
-    <section className="w-full bg-white dark:bg-zinc-900 py-10 px-4 md:px-8 flex justify-center items-center">
+    <section className="w-full bg-white dark:bg-black py-10 px-4 md:px-8 flex justify-center items-center">
       <div className="text-center">
         {/* Available for Freelance */}
         <div className="flex items-center justify-center gap-2 mb-6">
