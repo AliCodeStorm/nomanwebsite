@@ -58,7 +58,7 @@ const Contact = () => {
         e.target.reset();
     };
     return (
-        <div className="min-h-screen bg-white dark:bg-black text-black dark:text-white px-4 sm:px-6 lg:px-8 py-20">
+        <div className="min-h-[calc(100vh-150px)] bg-white dark:bg-black pt-20">
             <div className="max-w-5xl mx-auto">
                 {/* Header */}
                 <h1 className="text-4xl md:text-5xl font-bold text-center mb-4" >
@@ -70,7 +70,7 @@ const Contact = () => {
                     </TextAnimate>
                 </h1>
 
-                <motion.p
+                <motion.div
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     transition={{ delay: 0.3, duration: 0.7 }}
@@ -79,7 +79,7 @@ const Contact = () => {
                     <TextAnimate animation="blurInUp" by="character" duration={0.7} startOnView="true">
                         Have a project in mind? Let’s connect and talk about how we can grow your business together.
                     </TextAnimate>
-                </motion.p>
+                </motion.div>
 
                 <div className="grid md:grid-cols-2 gap-10">
                     {/* Contact Info */}
@@ -204,7 +204,7 @@ const Contact = () => {
                 </div>
             </div>
         </div>
-    );
+    ); 
 };
 
 export default Contact;

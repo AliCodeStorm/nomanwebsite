@@ -16,7 +16,7 @@ import { AuroraText } from '@/components/magicui/aurora-text';
 
 const About = () => {
     return (
-        <div className="bg-white text-black dark:bg-black dark:text-white min-h-screen">
+        <div className="min-h-[calc(100vh-150px)] bg-white dark:bg-black pt-10">
             {/* Hero Section */}
             <section className="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
                 <div className="text-center mb-16">

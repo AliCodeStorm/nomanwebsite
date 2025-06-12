@@ -12,13 +12,12 @@ export default function Navbar() {
   return (
     <header className="w-full px-6 py-4 shadow-md bg-gray-100 dark:bg-gray-900 fixed top-0 left-0 z-50">
       <div className="max-w-7xl mx-auto flex justify-between items-center">
-
-        <NavLink to="/" className="flex items-center">
-          <Avatar>
-            <AvatarImage src="https://github.com/shadcn.png" />
-            <AvatarFallback>CN</AvatarFallback>
-          </Avatar>
-        </NavLink>
+          <NavLink to="/" className="flex items-center">
+            <Avatar>
+              <AvatarImage src="https://github.com/shadcn.png" />
+              <AvatarFallback>CN</AvatarFallback>
+            </Avatar>
+          </NavLink>
 
         <div className="flex items-center gap-6">
           <NavigationMenu>

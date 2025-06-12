@@ -27,34 +27,37 @@ const HeroSection = () => {
 
   return (
     <>
-      <section id="heroSection" className="min-h-screen flex items-center bg-white dark:bg-black mt-6 md:mt-4">
+      <section
+        id="heroSection"
+        className="min-h-[calc(100vh-150px)] flex items-center bg-white dark:bg-black pt-20"
+      >
         <div className="container mx-auto px-4">
-          <div className="flex flex-col md:flex-row items-center">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-10">
             {/* Text Left with animation */}
             <motion.div
               initial={{ opacity: 0, x: -50 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, ease: "easeOut" }}
-              className="w-full md:w-1/2 text-center md:text-left order-1 mt-10"
+              className="w-full md:w-1/2 text-center md:text-left"
             >
-              <h1 className="text-4xl md:text-5xl font-bold mb-4">
+              <h1 className="text-4xl  font-bold mb-4">
                 Hi, I'm
-                <AuroraText speed={1}>
-                  Muhammad Noman,
-                </AuroraText>
+                <AuroraText speed={1}> Muhammad Noman,</AuroraText>
               </h1>
               <p className="text-lg mb-4">
                 A passionate Digital Marketer with real experience in running Google and Meta (Facebook/Instagram) ads.
               </p>
               <p className="mb-4">
-                I help businesses grow through smart, data-driven strategies that deliver actual results. Whether it's lead generation,
-                brand promotion, or boosting sales — I make sure your money isn't wasted but invested to grow.
+                I help businesses grow through smart, data-driven strategies that deliver actual results...
               </p>
               <p className="mb-4">Let's work together to take your business to the next level!</p>
 
-              <div className="flex flex-col sm:flex-row items-center gap-4">
+              <div className="flex flex-row sm:flex-row items-center justify-center sm:justify-start gap-4 mt-6">
                 <NavLink to="/contact">
-                  <Button className="cursor-pointer relative overflow-hidden " variant="outline">
+                  <Button
+                    className="cursor-pointer relative overflow-hidden"
+                    variant="outline"
+                  >
                     Get in Touch
                     <BorderBeam
                       size={40}
@@ -69,10 +72,9 @@ const HeroSection = () => {
                   </Button>
                 </NavLink>
 
-                <div className="flex gap-4 mt-4 sm:mt-0">
-                  <RainbowButton>Hire Me</RainbowButton>
-                </div>
+                <RainbowButton>Hire Me</RainbowButton>
               </div>
+
             </motion.div>
 
             {/* Lottie Right with animation */}
@@ -80,14 +82,15 @@ const HeroSection = () => {
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
-              className="w-full md:w-1/2 flex justify-center md:justify-end order-2 md:mt-0"
+              className="w-full md:w-1/2 flex justify-center md:justify-end"
             >
-              <div ref={lottieContainer} className="w-[400px] h-[400px]" />
+              <div ref={lottieContainer} className="w-[300px] md:w-[400px] h-[300px] md:h-[400px]" />
             </motion.div>
           </div>
+          <SocialIcons />
         </div>
       </section>
-      <SocialIcons />
+
       <ProjectShowcase
         projects={projectData}
         title="Latest Projects"

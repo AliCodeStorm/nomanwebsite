@@ -25,7 +25,7 @@ const Services = () => {
 
   return (
     <>
-      <div className="min-h-screen px-6 py-24 bg-white text-black dark:bg-black dark:text-white">
+      <div className="min-h-[calc(100vh-150px)] bg-white dark:bg-black pt-20">
         {/* Heading with fade-up animation */}
         <h1 className="text-4xl font-bold text-center mb-8">
           <TextAnimate

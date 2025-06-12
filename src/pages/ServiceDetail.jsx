@@ -13,7 +13,7 @@ const ServiceDetail = () => {
     const Icon = service.icon;
 
     return (
-        <div className="min-h-screen px-6 py-16 bg-white text-black dark:bg-black dark:text-white">
+        <div className="min-h-[calc(100vh-150px)] bg-white dark:bg-black pt-20">
             <div className="max-w-4xl mx-auto space-y-6">
                 <div className="flex items-center gap-3 mb-4">
                     <Icon className="w-8 h-8 text-blue-600" />
