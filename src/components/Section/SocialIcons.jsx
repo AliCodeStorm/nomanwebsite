@@ -8,18 +8,18 @@ import { FaPinterestP, FaBehance } from "react-icons/fa"; // Install with: npm i
 
 const SocialIcons = () => {
   return (
-    <section className="w-full bg-white dark:bg-black py-10 px-4 md:px-8 flex justify-center items-center">
+    <section className="w-full bg-white dark:bg-black mt-17 px-4 md:px-8 flex justify-center items-center">
       <div className="text-center">
         {/* Available for Freelance */}
         <div className="flex items-center justify-center gap-2 mb-6">
           <Circle className="w-4 h-4 text-primary" />
           <span className="text-lg font-medium text-gray-800 dark:text-gray-100">
-            Available for freelance
+            Coming Soon ......
           </span>
         </div>
 
         {/* Social Icons */}
-        <div className="flex justify-center flex-wrap gap-4 items-center mb-6">
+        <div className="flex justify-center flex-wrap md:gap-17 gap-6 items-center mb-6">
           <a href="#" aria-label="Facebook" className="text-blue-600 hover:scale-110 transition">
             <Facebook className="w-6 h-6" />
           </a>

@@ -64,7 +64,7 @@ const Footer = () => {
                                 <h3 className="text-sm font-semibold text-black dark:text-white">Support</h3>
                                 <ul className="mt-6 space-y-4">
                                     <li><NavLink to="/services" className="text-sm hover:text-blue-600">FAQ</NavLink></li>
-                                    <li><NavLink to="/services" className="text-sm hover:text-blue-600">Guides</NavLink></li>
+                                    <li><NavLink to="/guides" className="text-sm hover:text-blue-600">Guides</NavLink></li>
                                 </ul>
                             </div>
                             <div className="mt-10 md:mt-0">

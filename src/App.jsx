@@ -6,6 +6,7 @@ import Contact from "./pages/ContactPage";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import TermsAndConditions from "./pages/TermsAndConditions";
 import ServiceDetail from "./pages/ServiceDetail";
+import Guides from "./pages/Guides";
 
 export default function App() {
   return (
@@ -17,6 +18,7 @@ export default function App() {
       <Route path="/privacypolicy" element={<PrivacyPolicy />} />
       <Route path="/termsandconditions" element={<TermsAndConditions />} />
       <Route path="/services/:slug" element={<ServiceDetail />} />
+      <Route path="/guides" element={<Guides />} />
     </Routes>
   );
 }

@@ -29,7 +29,7 @@ const HeroSection = () => {
     <>
       <section
         id="heroSection"
-        className="min-h-[calc(100vh-150px)] flex items-center bg-white dark:bg-black pt-20"
+        className="min-h-[calc(100vh-150px)] flex items-center bg-white dark:bg-black md:pt-28 pt-20"
       >
         <div className="container mx-auto px-4">
           <div className="flex flex-col md:flex-row items-center justify-between gap-10">
@@ -40,17 +40,17 @@ const HeroSection = () => {
               transition={{ duration: 0.8, ease: "easeOut" }}
               className="w-full md:w-1/2 text-center md:text-left"
             >
-              <h1 className="text-4xl  font-bold mb-4">
+              <h1 className="text-4xl md:text-5xl font-bold mb-4">
                 Hi, I'm
                 <AuroraText speed={1}> Muhammad Noman,</AuroraText>
               </h1>
-              <p className="text-lg mb-4">
+              <p className="md:text-2xl mb-4">
                 A passionate Digital Marketer with real experience in running Google and Meta (Facebook/Instagram) ads.
               </p>
-              <p className="mb-4">
+              <p className="md:text-2xl mb-4">
                 I help businesses grow through smart, data-driven strategies that deliver actual results...
               </p>
-              <p className="mb-4">Let's work together to take your business to the next level!</p>
+              <p className="md:text-2xl mb-4">Let's work together to take your business to the next level!</p>
 
               <div className="flex flex-row sm:flex-row items-center justify-center sm:justify-start gap-4 mt-6">
                 <NavLink to="/contact">
@@ -84,7 +84,7 @@ const HeroSection = () => {
               transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
               className="w-full md:w-1/2 flex justify-center md:justify-end"
             >
-              <div ref={lottieContainer} className="w-[300px] md:w-[400px] h-[300px] md:h-[400px]" />
+              <div ref={lottieContainer} className="w-[350px] md:w-[400px] h-[250px] md:h-[400px]" />
             </motion.div>
           </div>
           <SocialIcons />

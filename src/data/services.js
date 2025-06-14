@@ -5,7 +5,7 @@ import {
     Target,
     Trophy
 } from 'lucide-react';
-
+import { CgWebsite } from "react-icons/cg";
 export const services = [
     {
         slug: "google-ads-management",
@@ -19,7 +19,18 @@ export const services = [
             "Ad copy A/B testing",
             "Conversion tracking setup"
         ],
-        image: "/googleads.jpg"
+        image: "https://media.istockphoto.com/id/2098359215/photo/digital-marketing-concept-businessman-using-laptop-with-ads-dashboard-digital-marketing.webp?a=1&b=1&s=612x612&w=0&k=20&c=bo9P4L3HQM2cipWrh8W7_HwPYNnUdHKqucWnduQLge0=",
+        benefits: [
+            "Lower cost-per-click (CPC)",
+            "Higher quality score for keywords",
+            "Better ad rank in auction"
+        ],
+        steps: [
+            "Campaign audit",
+            "Keyword strategy",
+            "Ad copy creation",
+            "Launch and monitor"
+        ],
     },
     {
         slug: "meta-ads-strategy",
@@ -78,17 +89,17 @@ export const services = [
         image: "/images/ecommerce.jpg"
     },
     {
-        slug: "consulting-and-audits",
-        title: "Consulting & Audits",
-        icon: Trophy,
-        shortDesc: "Expert advice to improve your ad performance.",
-        longDesc: "We review your existing ad strategies and provide expert recommendations with clear action plans.",
+        slug: "Website-Development",
+        title: "Website Development",
+        icon: CgWebsite,
+        shortDesc: "Build high-converting websites that drive results.",
+        longDesc: "We create custom websites optimized for conversions, speed, and user experience, ensuring your online presence stands out.",
         features: [
-            "Account audits",
-            "Performance analysis",
-            "One-on-one consulting",
-            "Strategic roadmaps"
+            "Custom design and development",
+            "Fast and secure hosting",
+            "Responsive and mobile-friendly",
+            "SEO-friendly architecture"
         ],
-        image: "/images/consulting.jpg"
+        image: "/websiteServices.jpg"
     }
 ];
